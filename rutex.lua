@@ -1,7 +1,7 @@
 -- all scripts for games that is, pet simulator bee swarm simulator from other creators, I do not pass them off as my own, the same esp, 
 --it's not mine, it's from another creator. RUTEX is a collection of the best scripts that even I use
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("RUTEX version 0.3 (not work)", "RJTheme4")
+local Window = Library.CreateLib("RUTEX version 0.3 (not work)", "RJTheme6")
 local Tab = Window:NewTab("functions")
 local Section = Tab:NewSection("Settings")
 
@@ -55,12 +55,12 @@ local Section = Tab:NewSection("Settings")
         Section:NewButton("LUCKY BLOCKS (auto claim blocks)", "script ot zlx :D", function()
             for i,v in pairs(game:GetDescendants()) do
                 if v.Name == 'TouchMe' then
-                    v.CFrame = game:GetService("Workspace").ZEKR1X4.HumanoidRootPart.CFrame
+                    v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
                 end
             end
         end)
 
-    local Tab = Window:NewTab("other")
+    local Tab = Window:NewTab("other script")
     local Section = Tab:NewSection("Settings")
     Section:NewButton("ESP", "click to enable ESP", function()
                     local custom_theme = {} --soon
@@ -578,3 +578,12 @@ end)
         end
         end)
     end)
+
+local Tab = Window:NewTab("other")
+local Section = Tab:NewSection("Settings")
+    
+Section:NewKeybind("close/open GUI", "select the key that will close and open the GUI", Enum.KeyCode.RightShift, function()
+Library:ToggleUI()
+end)
+    
+Section:NewLabel("GUI by robojini")
