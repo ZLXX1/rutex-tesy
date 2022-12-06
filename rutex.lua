@@ -1286,8 +1286,6 @@ end)
     
     end)
 
-    Section:NewLabel("letter V turn on fly and the selected button turn off")
-
 local Tab = Window:NewTab("other")
 local Section = Tab:NewSection("Settings")
     
