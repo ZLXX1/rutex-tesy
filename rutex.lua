@@ -1291,7 +1291,7 @@ end)
 local Tab = Window:NewTab("other")
 local Section = Tab:NewSection("Settings")
     
-Section:NewKeybind("close/open GUI", "select the key that will close and open the GUI", Enum.KeyCode.RightShift, function()
+Section:NewKeybind("close/open GUI", "select the key that will close and open the GUI", Enum.KeyCode.RightAlt, function()
 Library:ToggleUI()
 end)
     
