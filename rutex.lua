@@ -1,5 +1,5 @@
 -- all scripts for games that is, pet simulator bee swarm simulator from other creators, I do not pass them off as my own, the same esp, 
---it's not mine, it's from another creator. RUTEX is a collection of the best scripts that even I use
+--it's not mine, it's from another creator. RUTEX is a collection of the best scripts that even I use (version tesy 2013A)
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
 local Window = Library.CreateLib("RUTEX tesy 2013A")
 local Tab = Window:NewTab("functions")
