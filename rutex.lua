@@ -1,58 +1,70 @@
 -- all scripts for games that is, pet simulator bee swarm simulator from other creators, I do not pass them off as my own, the same esp, 
 --it's not mine, it's from another creator. RUTEX is a collection of the best scripts that even I use
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Robojini/Tuturial_UI_Library/main/UI_Template_1"))()
-local Window = Library.CreateLib("RUTEX tesy 2013A")
+local Window = Library.CreateLib("RuteX Tesy 2013B🟢")
 local Tab = Window:NewTab("functions")
 local Section = Tab:NewSection("Settings")
 
-    Section:NewTextBox("speed adjustment", "just enter a value from 0 to 500", function(txt) -- 500 (Макс. значение) | 0 (мин. значение) 
-        while game:GetService("RunService").RenderStepped:wait() do	
+    Section:NewTextBox("speed adjustment🟢", "just enter a value from 0 to 500", function(txt) -- 500 (Макс. значение) | 0 (мин. значение) 
             game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
-        end
     end)
 
-    Section:NewSlider("WalkSpeed", "drag the slider to increase or decrease the speed", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
+    Section:NewSlider("WalkSpeed🟢", "drag the slider to increase or decrease the speed", 500, 0, function(s) -- 500 (Макс. значение) | 0 (Мин. значение)
         game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
     end)
 
-    Section:NewTextBox("jump adjustment", "just enter a value from 0 to 500", function(txt)  -- 500 (Макс. значение) | 0 (мин. значение)
+    Section:NewTextBox("jump adjustment🟢", "just enter a value from 0 to 500", function(txt)  -- 500 (Макс. значение) | 0 (мин. значение)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
     end)
 
-    Section:NewSlider("JumpPower", "drag the slider to increase or decrease the max 1000", 1000, 0, function (s) -- 1000 (макс. значение) \ 0 (мин. значение)
+    Section:NewSlider("JumpPower🟢", "drag the slider to increase or decrease the max 1000", 1000, 0, function (s) -- 1000 (макс. значение) \ 0 (мин. значение)
         game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
     end)
 
-    Section:NewTextBox("HipHeight adjustment", "just enter a value from 0 to 2048", function(txt) -- 2048 (макс. значение) | 0 (мин. значение)
+    Section:NewTextBox("HipHeightAdjustment🟢", "just enter a value from 0 to 2048🟢", function(txt) -- 2048 (макс. значение) | 0 (мин. значение)
         game.Players.LocalPlayer.Character.Humanoid.HipHeight = txt
     end)
 
-    Section:NewSlider("HipHeight", "drag the slider to get higher or lower max 2048", 2048, 0, function (s) -- 2048 (макс. значение) \ 0 (мин. значение)
+    Section:NewSlider("HipHeight🟢", "drag the slider to get higher or lower max 2048", 2048, 0, function (s) -- 2048 (макс. значение) \ 0 (мин. значение)
         game.Players.LocalPlayer.Character.Humanoid.HipHeight = s
     end)
 
-    Section:NewTextBox("Gravity adjustment", "enter a value", function(txt) 
+    Section:NewTextBox("Gravity adjustment🟢", "enter a value", function(txt) 
         game.Workspace.Gravity = txt
     end)
         
-    Section:NewSlider("Gravity", "just drag the slider to increase gravity or decrease", 1000, 0, function (s) -- 1000 (макс. значение) \ 0 (мин. значение)
+    Section:NewSlider("Gravity🟢", "just drag the slider to increase gravity or decrease", 1000, 0, function (s) -- 1000 (макс. значение) \ 0 (мин. значение)
         game.Workspace.Gravity = s
     end)
 
         local Tab = Window:NewTab("game script")
         local Section = Tab:NewSection("Settings")
-        Section:NewButton("Pet Simulator X! (not work)", "Created by awdas, TSQ, SUMER, MaGiXx", function()
-            loadstring(game:HttpGet('https://kelp.fun/cdn/nullptr.lua'))()
-        end)
-        Section:NewButton("Bee Swarm Simulator", "Script By Boxking776", function()
+
+		Section:NewDropdown("Scripts on Pet simulator X!", "...", {"Kelp hub PSX🔴", "Script PSX🔴", "LaziumscriptPSX🟠", "jmespsx🟢"}, function(asd)
+			if asd == "Kelp hub PSX🔴" then
+			loadstring(game:HttpGet('https://kelp.fun/cdn/nullptr.lua'))()
+			elseif asd == "Script PSX🔴" then
+			loadstring(game:HttpGet("https://rawscripts.net/raw/CATS-or-Pet-Simulator-X!-Pasta-v2-6841"))()
+            elseif asd == "LaziumscriptPSX🟠" then
+                getgenv().AuthKey="HUGE_2Wj3FUzQv4gzY843"
+                getgenv().LoadSettings={
+                    DisableStartupPrompt=false
+                }
+                loadstring(game:HttpGet("https://HugeGames.io/script"))()
+            elseif asd == "jmespsx🟢" then
+                loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+            end
+		end)
+
+        Section:NewButton("Bee Swarm Simulator🟢", "Script By Boxking776", function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/Boxking776/kocmoc/main/kocmoc-remastered.lua"))()
         end)
-        Section:NewButton("eclipse hub", "...", function()
+        Section:NewButton("eclipse hub🟢", "...", function()
             getgenv().mainKey = "nil"
             local a,b,c,d,e=loadstring,request or http_request or (http and http.request) or (syn and syn.request),assert,tostring,"https://api.eclipsehub.xyz/auth"c(a and b,"Executor not Supported")a(b({Url=e.."\?\107e\121\61"..d(mainKey),Headers={["User-Agent"]="Eclipse"}}).Body)()
         end)
 
-        Section:NewButton("LUCKY BLOCKS (auto claim blocks)", "script ot zlx :D", function()
+        Section:NewButton("LUCKY BLOCKS (auto claim blocks)🟢", "script ot zlx :D", function()
             for i,v in pairs(game:GetDescendants()) do
                 if v.Name == 'TouchMe' then
                     v.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
@@ -63,7 +75,7 @@ local Section = Tab:NewSection("Settings")
     local Tab = Window:NewTab("other script")
     local Section = Tab:NewSection("Settings")
     
-    Section:NewButton("ESP", "click to enable ESP", function()
+    Section:NewButton("ESP🟢", "click to enable ESP", function()
                     local custom_theme = {} --soon
 
                 local function CreateInstance(cls,props)
@@ -415,7 +427,7 @@ local Section = Tab:NewSection("Settings")
 end)
 
 
-Section:NewButton("Anti AFK", "...", function()
+Section:NewButton("Anti AFK🟢", "...", function()
         wait(0.5)local ba=Instance.new("ScreenGui")
     local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
     local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
@@ -437,7 +449,7 @@ Section:NewButton("Anti AFK", "...", function()
     ab.Text="Roblox Tried to kick you but we didnt let them kick you :D"wait(2)ab.Text="Status : Active"end)
 end)
 
-    Section:NewButton("Btools", "press ctrl + click to delete the item", function()
+    Section:NewButton("Btools🟢", "press ctrl + click to delete the item", function()
             local Plr = game:GetService("Players").LocalPlayer
         local Mouse = Plr:GetMouse()
 
@@ -448,7 +460,7 @@ end)
         end)
     end)
 
-    Section:NewButton("noclip", "Created By KingLuna", function()
+    Section:NewButton("noclip🟢", "Created By KingLuna", function()
             local Workspace = game:GetService("Workspace")
         local CoreGui = game:GetService("CoreGui")
         local Players = game:GetService("Players")
@@ -566,7 +578,7 @@ end)
         end)
     end)
 
-    Section:NewButton("tp on z", "...", function()
+    Section:NewButton("tp on z🟢", "...", function()
             -- How to use; click 'z' on your keyboard and you will
         -- teleport to where ever your mouse is.
         plr = game.Players.LocalPlayer
@@ -581,7 +593,7 @@ end)
         end)
     end)
 
-    Section:NewButton("FullBright", "brightens the entire map", function()
+    Section:NewButton("FullBright🟢", "brightens the entire map", function()
                 -- FULLBRIGHT by ricey#7090
         pcall(function()
             local lighting = game:GetService("Lighting");
@@ -612,7 +624,7 @@ end)
         end)
     end)
 
-    Section:NewButton("freeCam", "shift+p endble/disable free cam", function()
+    Section:NewButton("freeCam🟢", "shift+p endble/disable free cam", function()
                     -----------------------------------------------------------------------
             -- Freecam
             -- Cinematic free camera for spectating and video production.
@@ -1122,7 +1134,7 @@ end)
             end
     end)
 
-    Section:NewButton("fly(beta)", "press the V button to turn off the fly", function()
+    Section:NewButton("fly(beta)🟠", "press the V button to turn off the fly", function()
                 -- Made By zack;#6969
 
         -- Instances:
@@ -1286,6 +1298,19 @@ end)
         coroutine.wrap(LHMZZV_fake_script)()
     end)
 
+    Section:NewButton("rejoin server🟢", "rejoin server", function()
+                local tpservice= game:GetService("TeleportService")
+        local plr = game.Players.LocalPlayer
+
+        tpservice:Teleport(game.PlaceId, plr)
+    end)
+
+    Section:NewButton("inf jump🟢", "infinite jump", function()
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")       
+        end)
+    end)
+
 local Tab = Window:NewTab("other")
 local Section = Tab:NewSection("Settings")
     
@@ -1294,3 +1319,5 @@ Library:ToggleUI()
 end)
     
 Section:NewLabel("GUI by ???")
+Section:NewLabel("🔴-not works, 🟢-works, 🟠-works incorrectly")
+Section:NewLabel("⚫-unavailable")
